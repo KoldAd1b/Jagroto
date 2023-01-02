@@ -1,26 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body {
+  font-family: "Open Sans", sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer components {
+  .section {
+    @apply w-screen px-12 lg:px-20 xl:px-28;
   }
-  body {
-    color: white;
-    background: black;
+  .nav-link {
+    @apply px-3 flex items-center tracking-wider  transition my-4 py-2 lg:py-0 lg:my-0 z-10 text-2xl lg:text-lg rounded-2xl shadow-xl lg:shadow-none hover:opacity-75 hover:shadow-none;
+  }
+  .heading {
+    @apply font-bold text-emerald-800 text-3xl lg:text-4xl xl:text-5xl bg-clip-text inline;
+  }
+  .hero-gradient {
+    background-image: linear-gradient(to right, #f9f4f4 50%, #e2f0ed 50%);
   }
 }
