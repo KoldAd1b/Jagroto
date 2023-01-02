@@ -1,8 +1,29 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaPlay } from "react-icons/fa";
 
 const Hero = () => {
+  const [submit, setSubmit] = useState(false);
+  const [status, setStatus] = useState(false);
+  const [email, setEmail] = useState("");
+
+  useEffect(() => {
+    if (status)
+      setTimeout(() => {
+        setStatus(false);
+        setEmail("");
+      }, 2000);
+  }, [status]);
+
+  const click = () => {
+    setSubmit(true);
+
+    setTimeout(() => {
+      setSubmit(false);
+      setStatus(true);
+    }, 4000);
+  };
+
   return (
     <div className="flex flex-col ">
       <section className="section hero-gradient py-12 ">
@@ -43,9 +64,22 @@ const Hero = () => {
             type="text"
             className="outline-none w-full bg-teal-600 px-6 py-4 shadow-md text-white placeholder:text-gray-300 rounded-md text-md focus:ring-2 ring-gray-300 transition duration-500"
             placeholder="Your email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={
+              status
+                ? submit
+                  ? ""
+                  : "Your response has been submitted"
+                : email
+            }
+            disabled={status}
           />
-          <button className="items-center lg:text-xl bg-[#f9f4f4] text-black font-extralight ml-4 px-6 py-4 rounded-md  justify-center hover:bg-blue-600 hover:text-white transition hover:-translate-y-1 hover:shadow-lg active:translate-y-0 ">
-            Submit
+          <button
+            className="items-center lg:text-xl bg-[#f9f4f4] text-black font-extralight ml-4 px-6 py-4 rounded-md  justify-center hover:bg-blue-600 hover:text-white transition hover:-translate-y-1 hover:shadow-lg active:translate-y-0 "
+            onClick={click}
+            disabled={submit}
+          >
+            {submit ? "Loading..." : "Submit"}
           </button>
         </div>
       </div>

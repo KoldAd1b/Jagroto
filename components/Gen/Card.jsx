@@ -1,7 +1,7 @@
 import React from "react";
 /* eslint-disable @next/next/no-img-element */
 
-const Card = ({ url, info, title, leading, key, index }) => {
+const Card = ({ url, title, key, index, color }) => {
   return (
     <div
       key={key}
@@ -22,13 +22,7 @@ const Card = ({ url, info, title, leading, key, index }) => {
       <div
         className={` bg-white opacity-95 shadow-md p-4 flex flex-col mr-4 mb-8 shadow-gray-400  `}
       >
-        <h3 className="text-xl font-bold  pb-1">{title}</h3>
-        <p className="truncate text-gray-400 font-sans text-base">{info}</p>
-        <div className="flex justify-between items-center font-light truncate">
-          <span className="text-gray-600 text-xs mt-1 opacity-75">
-            {leading}
-          </span>
-        </div>
+        <h3 className={`text-xl font-bold text-center pb-1`}>{title}</h3>
       </div>
     </div>
   );

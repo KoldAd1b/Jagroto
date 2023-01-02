@@ -38,20 +38,20 @@ const Navbar = () => {
           }`}
         >
           <li className="w-full flex justify-center">
-            <Link
+            <a
               className={` nav-link ${
                 open
                   ? "bg-gradient-to-r from-teal-400 to-teal-900 shadow-blue-300/50 "
                   : ""
               }`}
-              href={"/about-us"}
+              href={"#about"}
             >
               <span className="ml-2">About Us</span>
-            </Link>
+            </a>
           </li>
           <li className="w-full flex justify-center ">
-            <Link
-              href={"/campaign"}
+            <a
+              href={"#projects"}
               className={`nav-link ${
                 open
                   ? "bg-gradient-to-r from-teal-400 to-teal-900 shadow-blue-300/50"
@@ -59,11 +59,11 @@ const Navbar = () => {
               }`}
             >
               <span className="ml-2">Campaign</span>
-            </Link>
+            </a>
           </li>
           <li className="w-full flex justify-center">
-            <Link
-              href={"/contact-us"}
+            <a
+              href={"#footer"}
               className={` nav-link ${
                 open
                   ? "bg-gradient-to-r from-teal-400 to-teal-900 shadow-blue-300/50"
@@ -71,7 +71,7 @@ const Navbar = () => {
               }`}
             >
               <span className="ml-2  ">Contact Us</span>
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

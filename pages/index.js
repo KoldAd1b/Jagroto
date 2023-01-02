@@ -2,10 +2,11 @@ import Head from "next/head";
 import Footer from "../components/Gen/Footer";
 import Navbar from "../components/Gen/Navbar";
 import About from "../components/Home/About";
-import Events from "../components/Home/Events";
+import Team from "../components/Home/Team";
 import Hero from "../components/Home/Hero";
 import Projects from "../components/Home/Projects";
 import Work from "../components/Home/Work";
+import Upcoming from "../components/Home/Upcoming";
 
 export default function Home() {
   return (
@@ -19,7 +20,8 @@ export default function Home() {
       <Work />
       <About />
       <Projects />
-      <Events />
+      <Team />
+      <Upcoming />
       <Footer />
     </>
   );

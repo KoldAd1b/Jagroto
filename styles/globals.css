@@ -21,7 +21,7 @@ body {
     @apply px-3 flex items-center tracking-wider  transition my-4 py-2 lg:py-0 lg:my-0 z-10 text-2xl lg:text-lg rounded-2xl shadow-xl lg:shadow-none hover:opacity-75 hover:shadow-none;
   }
   .heading {
-    @apply font-bold text-emerald-800 text-3xl lg:text-4xl xl:text-5xl bg-clip-text inline;
+    @apply font-extrabold text-emerald-800 text-4xl lg:text-4xl xl:text-5xl bg-clip-text inline;
   }
   .hero-gradient {
     background-image: linear-gradient(to right, #f9f4f4 50%, #e2f0ed 50%);
